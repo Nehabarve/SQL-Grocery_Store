@@ -1,0 +1,28 @@
+Create table Stores
+(
+Store_Name varchar(30) not null,
+Store_id  varchar(10) not null primary key,
+Address_id Varchar(10) not null,
+Physical_address varchar(30) not null,
+Account_no int not null
+);
+insert into stores
+Values('Target','ST_1001','STR11','56 Sprauce St','1000011');
+insert into stores
+Values('StopnShop','ST_1002','STR12','425, Arsenal St','1000012');
+insert into stores
+Values('Market Basket','ST_1003','STR13','77,Russell St','1000013');
+insert into stores
+Values('Star Market','ST_1004','STR14','220 Chapel Rd','1000014');
+insert into stores
+Values('Patel Brothers','ST_1005','STR15','36 Bedford St','1000015');
+
+Alter table Stores
+add foreign key (address_id) references address(Address_id);
+Alter table Stores
+Add Foreign key (Account_no) REFERENCES  Bank_Account(Account_no);
+
+
+
+
+

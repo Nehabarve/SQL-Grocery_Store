@@ -1,0 +1,18 @@
+Create table Bank_Branch
+(
+Bank_name varchar(20) not null,
+Branch_id Varchar(20) primary key not null,
+Address_id Varchar(20) not null,
+Physical_address_Bank varchar(20) not null
+);
+
+Insert into Bank_Branch 
+values ('BOA','BR01','BK16','1065 Lexington St');
+insert into Bank_Branch
+values ('TD Bank','BR02','BK17','154 Triplo Rd');
+insert into Bank_Branch
+values ('Citi Bank','BR03','BK18','110 Forest St');
+insert into Bank_Branch
+values ('Chase','BR04','BK19','235 Pine St');
+insert into Bank_Branch
+values ('Santander Bank','BR05','BK20','96 Indian St');

@@ -1,0 +1,32 @@
+Create table Product_Classification
+(
+Classification_id  varchar(20) not null Primary key,
+Departments varchar(20) not null);
+
+insert into Product_classification (classification_id,Departments)
+values ('BV01','Beavrages' );
+insert into Product_classification (classification_id,Departments)
+values('BB02','Bread_Bakery');
+insert into Product_classification (classification_id,Departments)
+values('FZ03','Frozen_items');
+insert into Product_classification (classification_id,Departments)
+values('CC04','Child_Care');
+insert into Product_classification (classification_id,Departments)
+values('DD05','Dairy_Department');
+insert into Product_classification (classification_id,Departments)
+values('PC06','Personal Care');
+insert into Product_classification (classification_id,Departments)
+values('MM07','Meat_Department');
+insert into Product_classification (classification_id,Departments)
+values('ST08','Stationary');
+insert into Product_classification (classification_id,Departments)
+values('PG09','Paper_Goods');
+insert into Product_classification (classification_id,Departments)
+values('CT10','Cleanaers_Toiletries');
+insert into Product_classification (classification_id,Departments)
+values('PT11','Party_Decorations');
+insert into Product_classification (classification_id,Departments)
+values('FV12','Fruits_Vegetables');
+insert into Product_classification (classification_id,Departments)
+values('CG13','Canned_Goods');
+

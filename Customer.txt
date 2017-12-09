@@ -1,0 +1,33 @@
+Create Table Customer
+(
+Customer_id varchar(10) not null primary key,
+Full_Name varchar(20) not null,
+Address_id varchar(10),
+Physical_Address varchar(30),
+Account_no int not null,
+Email_id varchar(20),
+Employee_Id int not null
+);
+insert into customer
+values ('CST101','Mark Smith','CS1','256 Lincoln St Apt#3','1000001','marksmith@gmail.com','113');
+insert into customer
+values ('CST102','Jhon Hill','CS2','166 Summer St','1000002','jhonhill@yahoo.com','114');
+insert into customer
+values ('CST103','Jannice Brown','CS3','462 Winter St Apt#7','1000003',NULL,'115');
+insert into customer
+values ('CST104','Kelly Wood','CS4','392 Summer St','1000004','Kelly_wood@gmail.com','116');
+insert into  customer
+values ('CST105','David Perry','CS5','166 Summer St','1000005',NULL,'118');
+
+Alter table Customer
+Add Foreign key (Address_id) REFERENCES  Address (Address_id);
+Alter table Customer
+Add Foreign key (Account_no) REFERENCES  Bank_account(Account_no);
+alter table customer
+rename column employee_id to emp_id;
+Alter table customer
+add foreign key (Emp_Id) REFERENCES Employee_Store(Employee_Id);
+
+update customer
+set emp_id ='117'
+where customer_id='CST105';

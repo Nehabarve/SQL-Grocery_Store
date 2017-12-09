@@ -1,0 +1,27 @@
+Create Table Shopping_List
+(
+Product_name varchar(10) not null,
+Product_id Varchar(10),
+Store_name Varchar(20),
+Quantity  varchar(10)
+);
+
+insert into Shopping_List
+Values('Coffee','0001','Target','1Kg');
+insert into Shopping_List
+Values('Breads','0004','Hanaford','2 Packets');
+insert into Shopping_List
+Values('Shampoo','0009','MarketBasket','2.5Lts');
+insert into Shopping_List
+Values('Pen','0012','StopnShop','2set');
+insert into Shopping_List
+Values('Milk','0008','Hanaford','1.8Lts');
+insert into Shopping_List
+Values('Tea','0002','Patel Bros','1Kg');
+insert into Shopping_List
+Values('Apples','0016','StarMarket','1Kg');
+insert into Shopping_List
+Values('Sugar','0005','StarMarket','454Lbs');
+
+Alter table shopping_list
+Add Foreign key (Product_id) REFERENCES  Product(Product_id);

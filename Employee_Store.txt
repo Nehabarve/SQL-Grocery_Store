@@ -1,0 +1,34 @@
+Create table Employee_Store
+(
+Employee_Id int primary key not null,
+Employee_Fname varchar(30) not null,
+Employee_Lname varchar(30) not null,
+Revenue_Genrated_Dollars decimal(14,2),
+Annual_Salary decimal(14,2) not null,
+Job_Id int not null
+);
+
+Insert into Employee_Store
+values('111','Jimmy','Silver','0','50000','101');
+Insert into Employee_Store
+values('112','James','White','0','58000','102');
+Insert into Employee_Store
+values('113','Tim','Drew','5253.80','60000','103');
+Insert into Employee_Store
+values('114','Emma','Bill','2800.56','78000','103');
+Insert into Employee_Store
+values('115','Tom','Krick','1908.23','56000','103');
+Insert into Employee_Store
+values('116','Pheobe','Trick','900.56','45000','103');
+Insert into Employee_Store
+values('117','Monica','Jhonson','1050.33','37000','103');
+Insert into Employee_Store
+values('118','Vinci','Soni','0','80000','104');
+Insert into Employee_Store
+values('119','Ria','Silk','0','70000','105');
+
+Alter table employee_store
+add foreign key (job_id) references job_store(Job_id);
+
+alter table employee_store
+rename column job_id to Job_no;

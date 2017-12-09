@@ -1,0 +1,16 @@
+Create table Job_Store
+(
+Job_Id int primary key not null,
+Job_Designation varchar (30) not null
+);
+ insert into job_store
+ values ('101','Product_Manager');
+  insert into job_store
+ values ('102','Store_Manager');
+ insert into job_store
+ values ('103','Sales_Representative');
+  insert into job_store
+ values ('104','Dept_Head');
+ insert into job_store
+ values ('105','Cashier');
+ 

@@ -1,0 +1,48 @@
+Create Table Supplier
+(
+Supplier_id varchar(10) not null primary key,
+Supplier_Name Varchar(20) not null,
+Address_id Varchar(10) not null,
+Contact_No int unique,
+Account_No int unique not null,
+Store_id varchar(20) not null,
+Classification_id Varchar(20) not null
+);
+insert into Supplier
+Values('SPR200','MacLane','SP6',NULL,'1000006','ST_1001','BV01');
+insert into Supplier
+Values('SPR201','Core-Mark','SP7','6318548702','1000007','ST_1002','BB02');
+insert into Supplier
+Values('SPR202','GSC enterprise','SP8',NULL,'1000008','ST_1003','FZ03');
+insert into Supplier
+Values('SPR203','JPS','SP9','9875126474','1000009','ST_1004','CC04');
+insert into Supplier
+Values('SPR204','GMG','SP10',NULL,'1000010','ST_1005','DD05');
+
+Alter table Supplier
+Add Foreign key (Address_id) REFERENCES  address(Address_id);
+Alter table Supplier
+Add Foreign key (Account_no) REFERENCES  Bank_account(Account_no);
+Alter table supplier
+Add foreign key (Classification_id) References Product_classification(classification_id);
+Alter table Supplier
+Add Foreign key (store_id) REFERENCES  stores(Store_id);
+
+Alter table  supplier
+add Physical_Address_Supplier varchar(20);
+
+Update Supplier
+set Physical_Address_Supplier ='26,River St Ofc#20'
+Where Supplier_id ='SPR200';
+Update Supplier
+set Physical_Address_Supplier ='86 Spring St'
+Where Supplier_id ='SPR201';
+Update Supplier
+set Physical_Address_Supplier ='100 Charles St'
+Where Supplier_id ='SPR202';
+Update Supplier
+set Physical_Address_Supplier ='12 Orchid St'
+Where Supplier_id ='SPR203';
+Update Supplier
+set Physical_Address_Supplier ='45 Woodland St ofc#2'
+Where Supplier_id ='SPR204';

@@ -1,0 +1,54 @@
+Create table Product
+(
+Product_id Varchar(20) not null primary key,
+Classification_id varchar (10) not null,
+Product_name varchar(20) not null,
+Brand varchar(20) not null,
+Expiration Date,
+Mgf_State Varchar(20),
+Price_dollars int not null,
+Quantity   varchar(15) not null
+) ;
+
+alter table Product drop column Price_dollars_old ;
+insert into product
+values('0001','BV01','Coffee', 'Nestle','10-JUL-2018' ,'Canada','14','500lbs');
+insert into product
+Values('0007','CC04','Dipers','Huggies' ,NULL,'US','60','6 Pieces');
+insert into product
+values('0003','BV01','Soft Drink', 'Pepsi','08-AUG-2019' ,'US','10','1 Lt');
+insert into product
+values('0004','BB02','Breads','Hanaford Breads' ,'10-APR-2017' ,'US','3','400lbs');
+insert into product
+values('0002','BV01','Tea', 'Luptin' ,'05-SEP-2019' ,'India','14.99','400lbs');
+insert into product
+Values('0005','BB02','Sugar','Domain','07-MAY-2020','Canada','5','454lbs');
+insert into product
+Values('0006','FZ03','Frozen Veggies','Vadilal vegetables','05-JAN-2018','US','3.99','250lbs');
+insert into product
+Values('0008','DD05','Milk','Amul','15-Apr-2017','US','2.75','1.8 Lts');
+insert into product
+Values('0009','PC06','Shampoo','Pantene','01-OCT-2018','US','7.99','2.5 Lts');
+insert into product
+Values('0010','MM07','Beef Rolls','MEATBALL',NULL,'Mexico','10','10 Pieces');
+insert into product
+Values('0011','ST08','Notebook','Classmate',NULL,'Canada','3','1 Notebook');
+insert into product
+Values('0012','ST08','Pen','Cello',NULL,'China','5.99','set of 2');
+insert into product
+Values('0013','PT11','Disposable plates','Solo',NULL,'China','3.99','20 Plates');
+insert into product
+Values('0014','CT10','Dishwasher','Pamvoline',NULL,'Canada','6','2 Lts');
+insert into product
+Values('0015','PG09','Paper Towel','Bounty',NULL,'US','15','8 rolls');
+insert into product
+Values('0016','FV12','Apples','Red Apple',NULL,'US','2.99','1 Lbs');
+insert into product
+Values('0017','CG13','Canned Tamatos','Goya','12-APR-2017','US','3.25','200 lbs');
+
+Alter table product
+Add Foreign key (Classification_id) REFERENCES Product_classification(classification_id);
+
+alter table Product rename column Price_dollars to Price_dollars_Old;
+alter table Product add Price_dollars Numeric(14,2);
+update Product set Price_dollars = Price_dollars_old;

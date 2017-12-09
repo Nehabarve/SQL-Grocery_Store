@@ -1,0 +1,21 @@
+Declare 
+cursor Ucase_empname
+is 
+select * from Employee_Store;
+
+rec Ucase_empname%rowtype;
+Begin
+Open Ucase_empname;
+loop
+Fetch Ucase_empname into rec;
+exit when ucase_empname%notfound;
+update employee_store
+set Employee_fname=UPPER(Employee_fname),Employee_lname =UPPER(Employee_lname);
+
+end
+loop;
+close Ucase_empname;
+end;
+
+
+select * from employee_store;

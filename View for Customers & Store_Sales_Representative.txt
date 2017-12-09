@@ -1,0 +1,9 @@
+//-----View for Customers & Store_Sales_Representative---//
+
+Create or replace view Customer_Salesrep
+as
+select Employee_Id,Employee_fname,Employee_lname,Revenue_Genrated_Dollars,Customer.FULL_NAME,job_designation
+from employee_store,Customer,job_store
+where Customer.emp_id=employee_store.employee_id
+and  employee_store.job_no=job_store.job_id
+and  job_designation='Sales_Representative';

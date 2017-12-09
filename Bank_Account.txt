@@ -1,0 +1,43 @@
+Create table Bank_Account
+(
+Bank_name varchar(20) not null,
+Branch_Id Varchar(20)not null,
+Account_No int not null primary key,
+Account_Type varchar(10) not null ,
+Balance decimal(14,2) not null
+);
+insert into Bank_Account
+values ('BOA','BR01','1000001','Cheking','5000.56');
+insert into Bank_Account
+values ('TD Bank','BR02','1000002','Cheking','25000.96');
+insert into Bank_Account
+values ('Citi Bank','BR03','1000003','Saving','6000.36');
+insert into Bank_Account
+values ('Chase','BR04','1000004','Cheking','77005.15');
+insert into Bank_Account
+values ('Santander Bank','BR05','1000005','Saving','8000');
+insert into Bank_Account
+values ('BOA','BR01','1000006','Cheking','60000.87');
+insert into Bank_Account
+values ('TD Bank','BR02','1000007','Cheking','7500');
+insert into Bank_Account
+values ('Citi Bank','BR03','1000008','Saving','56000.76');
+insert into Bank_Account
+values ('Chase','BR04','1000009','Cheking','9600');
+insert into Bank_Account
+values ('Santander Bank','BR05','1000010','Saving','100000');
+insert into Bank_Account
+values ('BOA','BR01','1000011','Cheking','2000540');
+insert into Bank_Account
+values ('TD Bank','BR02','1000012','Cheking','44000');
+insert into Bank_Account
+values ('Citi Bank','BR03','1000013','Saving','6200');
+insert into Bank_Account
+values ('Chase','BR04','1000014','Cheking','69900');
+insert into Bank_Account
+values ('Santander Bank','BR05','1000015','Saving','330025');
+
+Alter table Bank_account
+Add Foreign key (Address_id) REFERENCES  Address (Address_id);
+Alter table Bank_account
+Add Foreign key (Branch_id) REFERENCES  Bank_branch (Branch_id);

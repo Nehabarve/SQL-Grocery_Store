@@ -1,0 +1,52 @@
+Create Table Address
+(
+Address_id varchar(10) not null primary key,
+House_Apt_Street_No varchar(20)not null,
+City  Varchar(10),
+State_Name Varchar(10),
+Zip_Code int not null
+);
+
+insert into address
+values('CS3','462 Winter St Apt#7','Woburn','MA','12691');
+insert into address
+values('CS4','117 Moody St','Burlington','MA','12453');
+insert into address
+values('CS5','392 Summer St','Shrewbury','MA','12989');
+insert into address
+values('CS2','166 Summer St','Waltham','MA','12453');
+insert into  address
+values ('CS1','256 Lincoln St Apt#3','Lowell','MA','12651');
+insert into address
+values('SP6','26,River St Ofc#20','Bedford','MA','13563');
+insert into address
+values('SP7','86 Spring St','Waltham','MA','15653');
+insert into address
+values('SP8','100 Charles St','Fitchburg','NY','13653');
+insert into address
+values('SP9','12 Orchid St','Nashua','NH','14053');
+insert into address
+values('SP10','45 Woodland St ofc#2','Newport','RI','25613');
+insert into address
+values('STR11','56 Sprauce St','Nashua','NH','25613');
+insert into address
+values('STR12','425, Arsenal St','Watertown','MA','22472');
+insert into address
+values('STR13','77,Russell St','Waltham','MA','22452');
+insert into address
+values('STR14','220 Chapel Rd','Allston','MA','21701');
+insert into address
+values('STR15','36 Bedford St','Lexington','MA','12420');
+insert into address
+values('BK16','1065 Lexington St','Watertown','MA','12452');
+insert into address
+values('BK17','154 Triplo Rd','Woburn','MA','25461');
+insert into address
+values('BK18','110 Forest St','Nashua','NH','25613');
+insert into address
+values('BK19','235 Pine St','Lowell','MA','25461');
+insert into address
+values('BK20','96 Indian St','Waltham','MA','12546');
+
+Alter table address
+drop column House_Apt_Street_No;
